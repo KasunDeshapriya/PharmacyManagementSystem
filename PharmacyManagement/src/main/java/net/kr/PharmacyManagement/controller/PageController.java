@@ -11,7 +11,18 @@ public class PageController {
 	
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("Greeting","Welcome to Spring Web MVC");
+		//mv.addObject("Greeting","Welcome to Spring Web MVC");//this is to test only.
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
+		return mv; 
+	}
+	
+@RequestMapping(value = {"/inventoryhome"})
+	
+	public ModelAndView inventoryhome() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title","Inventory Home");
+		mv.addObject("userClickInventoryHome",true);
 		return mv; 
 	}
 	
